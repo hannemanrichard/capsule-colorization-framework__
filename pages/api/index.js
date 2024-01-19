@@ -3,6 +3,7 @@ import { sequence1, sequence2, sequence3 } from "../../data/seq";
 import { getDownloadURL, ref } from "firebase/storage";
 
 export default async function handler(req, res) {
+  res.setHeader('Access-Control-Allow-Origin', '*')
   const index = req.body.idx;
   const sequence = req.body.seq;
   const isEnd = req.body.ise;
